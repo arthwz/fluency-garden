@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluency Garden English School</title>
+<meta name="description" content="Aulas de inglês online com metodologia baseada em Linguística Aplicada. Speaking desde a primeira aula, plano de fluência individual e acompanhamento contínuo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" rx="18" fill="#1d1d47"/>
+      <!-- Flower symbol inspired by brand -->
+      <path d="M50 30 C50 22 44 18 44 18 C44 18 38 22 38 30 C38 38 44 38 44 38" stroke="#fffeee" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M50 30 C50 22 56 18 56 18 C56 18 62 22 62 30 C62 38 56 38 56 38" stroke="#fffeee" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M50 30 C42 30 38 24 38 24 C38 24 38 30 44 34 C50 38 50 38 50 38" stroke="#ffdbe0" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M50 30 C58 30 62 24 62 24 C62 24 62 30 56 34 C50 38 50 38 50 38" stroke="#ffdbe0" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <!-- Heart center -->
+      <path d="M50 34 C49 33 47 33 47 35 C47 36.5 50 39 50 39 C50 39 53 36.5 53 35 C53 33 51 33 50 34Z" fill="#ffdbe0"/>
+      <!-- Stem -->
+      <line x1="50" y1="39" x2="50" y2="58" stroke="#fffeee" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Roots -->
+      <path d="M50 58 L44 65 M50 58 L50 66 M50 58 L56 65 M44 65 L40 70 M50 66 L48 72 M50 66 L52 72 M56 65 L60 70" stroke="#fffeee" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <div class="nav-logo-text">
+      Fluency Garden
+      <span>English School</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#metodologia">Metodologia</a></li>
+    <li><a href="#programas">Programas</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="faca-parte-do-time.html">Faça Parte do Time</a></li>
+    <li><a href="https://wa.me/5511996347484?text=Hello%21+Vim+pelo+site+e+quero+saber+mais+sobre+as+aulas%21" target="_blank" rel="noopener" class="nav-cta">Falar com a escola</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#sobre" onclick="closeMobile()">Sobre</a></li>
+    <li><a href="#metodologia" onclick="closeMobile()">Metodologia</a></li>
+    <li><a href="#programas" onclick="closeMobile()">Programas</a></li>
+    <li><a href="#faq" onclick="closeMobile()">FAQ</a></li>
+    <li><a href="faca-parte-do-time.html">Faça Parte do Time</a></li>
+    <li><a href="https://wa.me/5511996347484?text=Hello%21+Vim+pelo+site+e+quero+saber+mais+sobre+as+aulas%21" target="_blank" rel="noopener">Falar com a escola ↗</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg-blob hero-bg-blob-1" data-parallax="0.18"></div>
+  <div class="hero-bg-blob hero-bg-blob-2" data-parallax="0.1"></div>
+
+  <!-- discreet botanical detail -->
+  <svg class="hero-leaf" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 56 C30 40 60 30 116 6" stroke="#51280b" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M30 42 C30 32 38 26 46 26 C46 36 38 42 30 42Z" stroke="#51280b" stroke-width="1.2" fill="none"/>
+    <path d="M58 30 C58 20 66 14 74 14 C74 24 66 30 58 30Z" stroke="#51280b" stroke-width="1.2" fill="none"/>
+    <path d="M86 20 C86 10 94 4 102 4 C102 14 94 20 86 20Z" stroke="#51280b" stroke-width="1.2" fill="none"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-badge reveal">Aulas 100% online · Método próprio</div>
+    <h1 class="hero-headline reveal reveal-delay-1">
+      Inglês que você<br>
+      <em>realmente usa,</em><br>
+      com estrutura e propósito.
+    </h1>
+    <p class="hero-sub reveal reveal-delay-2">
+      Aulas individuais com método próprio, feitas para a sua rotina. Do diagnóstico ao acompanhamento, cada etapa pensada para a sua fluência real.
+    </p>
+
+    <ul class="hero-checks reveal reveal-delay-2">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Speaking desde a primeira aula
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Método baseado em Linguística Aplicada
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Plano de Fluência Individual
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Acompanhamento contínuo
+      </li>
+    </ul>
+
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="https://wa.me/5511996347484?text=Hello%21+Vim+pelo+site+e+quero+saber+mais+sobre+as+aulas%21" target="_blank" rel="noopener" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.558 4.116 1.525 5.843L.057 23.571a.5.5 0 00.611.611l5.728-1.468A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.939 0-3.762-.524-5.327-1.436l-.381-.226-3.956 1.014 1.014-3.768-.249-.395A9.964 9.964 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Quero fazer o diagnóstico
+      </a>
+      <a href="#metodologia" class="btn-secondary">Conhecer o método</a>
+    </div>
+  </div>
+
+  <div class="hero-visual reveal-scale reveal-delay-2">
+    <div class="hero-ring"></div>
+    <div class="hero-photo-frame">
+      <!-- Substitua a tag abaixo pela sua foto: <img src="sua-foto.jpg" alt="Teacher Gabi"> -->
+      <div class="hero-photo-placeholder">
+        [ FOTO DA TEACHER GABI AQUI ]<br><br>Substitua por:<br>&lt;img src="sua-foto.jpg" alt="Teacher Gabi"&gt;
+      </div>
+    </div>
+    <div class="hero-float-card hero-float-card-1">
+      <div class="float-icon">🌿</div>
+      <div>Método<br>baseado em SLA</div>
+    </div>
+    <div class="hero-float-card hero-float-card-2">
+      ✨ Speaking desde a 1ª aula
+    </div>
+    <div class="hero-float-card hero-float-card-3">
+      <div class="float-icon">🗺️</div>
+      <div>Plano de Fluência<br>Individual</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">Role para descobrir</div>
+</section>
+
+<!-- BARRA DE CREDIBILIDADE -->
+<div id="diferenciais">
+  <div class="cred-grid">
+    <div class="cred-item reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>
+      <span>4+ anos de<br>experiência</span>
+    </div>
+    <div class="cred-item reveal reveal-delay-1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      <span>100%<br>Online</span>
+    </div>
+    <div class="cred-item reveal reveal-delay-2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span>Baseado<br>no CEFR</span>
+    </div>
+    <div class="cred-item reveal reveal-delay-3">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      <span>Speaking<br>desde o início</span>
+    </div>
+    <div class="cred-item reveal reveal-delay-4">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Plano<br>Individual</span>
+    </div>
+    <div class="cred-item reveal reveal-delay-4">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v3l2 2"/></svg>
+      <span>Diagnóstico<br>personalizado</span>
+    </div>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="sobre-content">
+    <div class="section-label reveal">Sobre a escola</div>
+    <h2 class="section-title reveal reveal-delay-1">Uma escola que<br>nasceu de uma<br><em>convicção.</em></h2>
+    <p class="sobre-text reveal reveal-delay-2">
+      A Fluency Garden nasceu de uma convicção: aprender inglês não precisa ser frustrante, genérico ou sem direção. Antes de se tornar escola, começou com o trabalho da Teacher Gabi, professora com 4 anos de experiência que percebeu que a maioria dos alunos abandonava o inglês não por falta de esforço, mas porque nunca tinham recebido o tipo certo de ensino.
+    </p>
+    <p class="sobre-text reveal reveal-delay-3">
+      Foi a partir dessa observação, somada a muito estudo em Linguística Aplicada e Aquisição de Segunda Língua, que surgiu a necessidade de criar algo diferente: uma escola com metodologia sólida, experiência cuidadosa e acompanhamento real.
+    </p>
+    <div class="sobre-cta-row reveal reveal-delay-4">
+      <a href="#metodologia" class="btn-secondary">Conheça a metodologia</a>
+    </div>
+  </div>
+
+  <div class="sobre-visual reveal-scale reveal-delay-1">
+    <svg class="sobre-deco" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="8" cy="8" r="2.5" fill="#6e1212"/><circle cx="30" cy="8" r="2.5" fill="#6e1212"/><circle cx="52" cy="8" r="2.5" fill="#6e1212"/>
+      <circle cx="8" cy="30" r="2.5" fill="#6e1212"/><circle cx="30" cy="30" r="2.5" fill="#6e1212"/><circle cx="52" cy="30" r="2.5" fill="#6e1212"/>
+      <circle cx="8" cy="52" r="2.5" fill="#6e1212"/><circle cx="30" cy="52" r="2.5" fill="#6e1212"/><circle cx="52" cy="52" r="2.5" fill="#6e1212"/>
+    </svg>
+    <div class="sobre-photo">
+      <!-- Substitua pelo seu retrato: <img src="gabi-portrait.jpg" alt="Teacher Gabi"> -->
+      <div class="sobre-photo-placeholder">
+        [ FOTO DA TEACHER GABI AQUI ]<br><br>Substitua por:<br>&lt;img src="gabi-portrait.jpg" alt="Teacher Gabi"&gt;
+      </div>
+    </div>
+    <div class="sobre-badge">
+      <strong>4+</strong>
+      anos de<br>experiência
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS EM CARDS -->
+<section id="pilares">
+  <div class="pilares-inner">
+    <div class="section-label reveal">Diferenciais</div>
+    <h2 class="section-title reveal reveal-delay-1" style="max-width:560px;">O que torna a experiência <em>diferente.</em></h2>
+    <p class="section-lead reveal reveal-delay-2">Quatro pilares sustentam cada aula, cada plano e cada etapa da sua jornada.</p>
+
+    <div class="pilares-grid">
+      <div class="pilar-card reveal">
+        <div class="pilar-icon">🎓</div>
+        <div class="pilar-title">Metodologia com base acadêmica real</div>
+        <p class="pilar-text">O ensino é estruturado com referências consolidadas da Linguística Aplicada, garantindo progressão e consistência.</p>
+      </div>
+      <div class="pilar-card reveal reveal-delay-1">
+        <div class="pilar-icon">🎯</div>
+        <div class="pilar-title">Personalização com propósito</div>
+        <p class="pilar-text">O conteúdo é adaptado ao seu contexto, seus objetivos e seu ritmo, sem abrir mão da progressão pedagógica.</p>
+      </div>
+      <div class="pilar-card reveal reveal-delay-2">
+        <div class="pilar-icon">🗣️</div>
+        <div class="pilar-title">Speaking desde o início</div>
+        <p class="pilar-text">A produção oral é trabalhada desde a primeira aula, com segurança e gradualidade.</p>
+      </div>
+      <div class="pilar-card reveal reveal-delay-3">
+        <div class="pilar-icon">📊</div>
+        <div class="pilar-title">Acompanhamento contínuo</div>
+        <p class="pilar-text">Diagnóstico, plano individual, relatórios e monitoramento ao longo de toda a jornada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="experiencia">
+  <div class="exp-inner">
+    <div class="section-label reveal">Como funciona</div>
+    <h2 class="section-title reveal reveal-delay-1" style="max-width:600px;">Uma jornada pensada<br>em cada <em>detalhe.</em></h2>
+    <p class="section-lead reveal reveal-delay-2">
+      Estudar na Fluency Garden é diferente desde o primeiro contato. Não é apenas uma aula de inglês: é um desenvolvimento linguístico estruturado.
+    </p>
+
+    <div class="flow-grid">
+      <div class="flow-step reveal">
+        <div class="flow-num">🔍</div>
+        <div class="flow-title"><small>Etapa 01</small>Diagnóstico</div>
+        <p class="flow-text">Muito além de uma prova de nível: mapeamento de proficiência, fluência oral, listening, repertório, gramática e segurança comunicativa.</p>
+      </div>
+      <div class="flow-step reveal reveal-delay-1">
+        <div class="flow-num">🗺️</div>
+        <div class="flow-title"><small>Etapa 02</small>Plano Individual</div>
+        <p class="flow-text">Cada aluno recebe um plano individual com objetivos linguísticos, competências-alvo e direcionamento claro. Revisado ao longo da jornada.</p>
+      </div>
+      <div class="flow-step reveal reveal-delay-2">
+        <div class="flow-num">💬</div>
+        <div class="flow-title"><small>Etapa 03</small>Aulas</div>
+        <p class="flow-text">Aulas comunicativas e contextualizadas, com speaking desde o primeiro encontro e conteúdo conectado à sua vida real.</p>
+      </div>
+      <div class="flow-step reveal reveal-delay-3">
+        <div class="flow-num">📈</div>
+        <div class="flow-title"><small>Etapa 04</small>Relatórios</div>
+        <p class="flow-text">Periodicamente, o aluno recebe análise real da sua evolução: competências desenvolvidas, pontos de atenção e próximos focos.</p>
+      </div>
+      <div class="flow-step reveal reveal-delay-4">
+        <div class="flow-num">🌸</div>
+        <div class="flow-title"><small>Etapa 05</small>Fluência</div>
+        <p class="flow-text">O resultado de um processo estruturado: confiança comunicativa real para usar o inglês onde a sua vida pedir.</p>
+      </div>
+    </div>
+
+    <div class="exp-note reveal">
+      <div class="exp-note-icon">🤝</div>
+      <div>
+        <div class="exp-note-title">Acompanhamento Contínuo</div>
+        <p class="exp-note-text">O professor monitora evolução, ajusta estratégias e está presente além das aulas. Aqui, o aluno nunca está sozinho no processo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METODOLOGIA -->
+<section id="metodologia">
+  <div class="metod-inner">
+    <div class="metod-header">
+      <div>
+        <div class="section-label reveal">Metodologia</div>
+        <h2 class="section-title reveal reveal-delay-1">Como o aprendizado<br>acontece <em>de verdade.</em></h2>
+      </div>
+      <p class="section-lead reveal reveal-delay-2" style="margin-bottom:0;">
+        Fluência não acontece por acaso. É construída com estrutura, progressão e significado. Cada pilar da metodologia foi pensado para que o aluno avance com confiança. <em>Toque em cada etapa para explorar.</em>
+      </p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item reveal open">
+        <div class="tl-dot">01</div>
+        <div class="tl-card">
+          <button class="tl-trigger" onclick="toggleTimeline(this)" aria-expanded="true">
+            <div class="tl-trigger-title"><small>Padrão Internacional</small>CEFR</div>
+            <span class="tl-arrow">▾</span>
+          </button>
+          <div class="tl-body">
+            <p>O desenvolvimento de cada aluno é organizado com base no CEFR, o padrão internacional criado pelo Conselho da Europa. Ele orienta toda a progressão pedagógica, definindo o que o aluno deve ser capaz de <em>fazer</em> com o idioma em cada etapa.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal reveal-delay-1">
+        <div class="tl-dot">02</div>
+        <div class="tl-card">
+          <button class="tl-trigger" onclick="toggleTimeline(this)" aria-expanded="false">
+            <div class="tl-trigger-title"><small>CLT</small>Ensino Comunicativo</div>
+            <span class="tl-arrow">▾</span>
+          </button>
+          <div class="tl-body">
+            <p>A língua é ensinada como ferramenta de comunicação. A gramática é importante, mas é trabalhada em contexto, conectada a funções comunicativas reais. O aluno aprende <em>quando, como e por que</em> usar cada estrutura.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal reveal-delay-2">
+        <div class="tl-dot">03</div>
+        <div class="tl-card">
+          <button class="tl-trigger" onclick="toggleTimeline(this)" aria-expanded="false">
+            <div class="tl-trigger-title"><small>SLA</small>Aquisição de Segunda Língua</div>
+            <span class="tl-arrow">▾</span>
+          </button>
+          <div class="tl-body">
+            <p>Toda a metodologia é construída sobre fundamentos da SLA, a área que investiga como o cérebro processa e adquire linguagem. O aluno recebe input no nível certo, produz linguagem ativamente e aprende em ambiente emocionalmente seguro.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot">04</div>
+        <div class="tl-card">
+          <button class="tl-trigger" onclick="toggleTimeline(this)" aria-expanded="false">
+            <div class="tl-trigger-title"><small>Speaking</small>Produção Oral Desde o Início</div>
+            <span class="tl-arrow">▾</span>
+          </button>
+          <div class="tl-body">
+            <p>Muitos alunos estudam inglês por anos sem conseguir sustentar uma conversa. Aqui, o speaking é trabalhado desde a primeira aula, com gradualidade, segurança e propósito. O foco não é perfeição: é confiança comunicativa real.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal reveal-delay-1">
+        <div class="tl-dot">05</div>
+        <div class="tl-card">
+          <button class="tl-trigger" onclick="toggleTimeline(this)" aria-expanded="false">
+            <div class="tl-trigger-title"><small>Listening</small>Compreensão Auditiva Real</div>
+            <span class="tl-arrow">▾</span>
+          </button>
+          <div class="tl-body">
+            <p>O aluno é exposto a diferentes sotaques, velocidades e contextos autênticos. O trabalho desenvolve compreensão global e tolerância à ambiguidade, reduzindo progressivamente a dependência de tradução mental.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal reveal-delay-2">
+        <div class="tl-dot">06</div>
+        <div class="tl-card">
+          <button class="tl-trigger" onclick="toggleTimeline(this)" aria-expanded="false">
+            <div class="tl-trigger-title"><small>Progressão</small>Aprendizagem em Espiral</div>
+            <span class="tl-arrow">▾</span>
+          </button>
+          <div class="tl-body">
+            <p>A progressão segue princípios da aprendizagem em espiral: o aluno revisita estruturas, amplia repertório e reutiliza a língua em contextos cada vez mais complexos. O avanço depende da capacidade real de usar o idioma.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal reveal-delay-3">
+        <div class="tl-dot">07</div>
+        <div class="tl-card">
+          <button class="tl-trigger" onclick="toggleTimeline(this)" aria-expanded="false">
+            <div class="tl-trigger-title"><small>Feedback</small>Feedback Formativo</div>
+            <span class="tl-arrow">▾</span>
+          </button>
+          <div class="tl-body">
+            <p>Em cada aula, o aluno recebe feedback formativo: devolutivas claras sobre o que já domina e o que desenvolver a seguir. Somado aos relatórios pedagógicos periódicos, ele garante que você sempre saiba onde está na jornada.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal reveal-delay-4">
+        <div class="tl-dot">🌸</div>
+        <div class="tl-card">
+          <button class="tl-trigger" onclick="toggleTimeline(this)" aria-expanded="false">
+            <div class="tl-trigger-title"><small>Destino</small>Fluência</div>
+            <span class="tl-arrow">▾</span>
+          </button>
+          <div class="tl-body">
+            <p>O objetivo final é sempre a fluência real, não o inglês de prova. Ensino estruturado, comunicativo, progressivo e personalizado, para que você use o idioma com confiança na sua vida real.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMAS -->
+<section id="programas">
+  <div class="programas-header">
+    <div class="section-label reveal">Programas</div>
+    <h2 class="section-title reveal reveal-delay-1">Encontre o formato<br>certo <em>para você.</em></h2>
+    <p class="section-lead reveal reveal-delay-2">
+      Cada programa foi desenhado para um momento diferente da jornada. Seja qual for o seu objetivo, há um caminho estruturado esperando por você.
+    </p>
+  </div>
+
+  <div class="programas-grid">
+    <!-- Root Path — aulas em dupla -->
+    <div class="programa-card programa-card-default reveal">
+      <div class="programa-icon icon-default">🌿</div>
+      <div class="section-label">Programa</div>
+      <div class="programa-title">Root Path</div>
+      <div class="programa-for">Aulas em dupla · você traz a sua parceria</div>
+      <p class="programa-desc">Para quem aprende melhor ao lado de alguém de confiança: um amigo, um colega de trabalho ou alguém da família. A dupla já vem formada e a progressão é desenhada para os dois.</p>
+      <div class="programa-horas">
+        <span>25h Sprout</span>
+        <span>50h Flourish</span>
+        <em>por semestre</em>
+      </div>
+      <ul class="programa-features">
+        <li>Plano de fluência pensado para a dupla</li>
+        <li>Interação comunicativa constante entre os dois</li>
+        <li>Progressão estruturada com base no CEFR</li>
+        <li>Feedback formativo individual e conjunto</li>
+      </ul>
+      <a href="https://wa.me/5511996347484?text=Hello%21+Vim+pelo+site+e+tenho+interesse+no+Root+Path+%28aulas+em+dupla%29%21" target="_blank" rel="noopener" class="programa-cta cta-default">Quero o Root Path</a>
+    </div>
+
+    <!-- Bloom Path — aulas individuais (Destaque) -->
+    <div class="programa-card programa-card-featured reveal reveal-delay-1">
+      <div class="programa-badge">⭐ Mais escolhido</div>
+      <div class="programa-icon icon-featured">🌸</div>
+      <div class="section-label">Destaque</div>
+      <div class="programa-title">Bloom Path</div>
+      <div class="programa-for">Aulas individuais · foco total em você</div>
+      <p class="programa-desc">Cada aula construída em torno dos seus objetivos, contexto e ritmo. Do mercado de trabalho às viagens, o conteúdo se adapta à sua vida real.</p>
+      <div class="programa-horas">
+        <span>25h Sprout</span>
+        <span>50h Flourish</span>
+        <em>por semestre</em>
+      </div>
+      <ul class="programa-features">
+        <li>Plano de fluência individual</li>
+        <li>Personalização total de temas e estratégias</li>
+        <li>Ritmo e frequência adaptáveis</li>
+        <li>Feedback formativo em cada aula</li>
+        <li>Relatórios pedagógicos de evolução</li>
+      </ul>
+      <a href="https://wa.me/5511996347484?text=Hello%21+Vim+pelo+site+e+tenho+interesse+no+Bloom+Path+%28aulas+individuais%29%21" target="_blank" rel="noopener" class="programa-cta cta-featured">Quero o Bloom Path</a>
+    </div>
+
+    <!-- Grove Path — aulas em grupo -->
+    <div class="programa-card programa-card-default reveal reveal-delay-2">
+      <div class="programa-icon icon-default">🌳</div>
+      <div class="section-label">Programa</div>
+      <div class="programa-title">Grove Path</div>
+      <div class="programa-for">Aulas em grupo · o grupo já vem formado</div>
+      <p class="programa-desc">Para grupos que querem crescer juntos: equipes de trabalho, turmas de amigos ou famílias. A riqueza de vozes e perspectivas dá ao speaking e ao listening uma dimensão que só o grupo oferece.</p>
+      <div class="programa-horas">
+        <span>50h Flourish</span>
+        <em>por semestre</em>
+      </div>
+      <ul class="programa-features">
+        <li>Percurso desenhado para o objetivo comum do grupo</li>
+        <li>Prática comunicativa real e diversa</li>
+        <li>Progressão estruturada com base no CEFR</li>
+        <li>Acompanhamento do grupo e de cada participante</li>
+      </ul>
+      <a href="https://wa.me/5511996347484?text=Hello%21+Vim+pelo+site+e+tenho+interesse+no+Grove+Path+%28aulas+em+grupo%29%21" target="_blank" rel="noopener" class="programa-cta cta-ghost">Quero o Grove Path</a>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<!-- Placeholders: substitua pelos depoimentos reais dos seus alunos -->
+<section id="depoimentos">
+  <div class="depo-inner">
+    <div class="programas-header">
+      <div class="section-label reveal">Depoimentos</div>
+      <h2 class="section-title reveal reveal-delay-1">Quem já está<br><em>florescendo.</em></h2>
+      <p class="section-lead reveal reveal-delay-2">Histórias de quem trocou o inglês travado por confiança comunicativa real.</p>
+    </div>
+
+    <div class="depo-grid">
+      <div class="depo-card reveal">
+        <div class="depo-quote-mark">"</div>
+        <p class="depo-text">Eu estudava inglês há anos sem conseguir falar. Com o plano individual e o speaking desde a primeira aula, em poucos meses eu já sustentava conversas que antes me travavam completamente.</p>
+        <div class="depo-author">
+          <div class="depo-avatar">M</div>
+          <div class="depo-name">Mariana <span>Aluna · Individual Class</span></div>
+        </div>
+      </div>
+      <div class="depo-card reveal reveal-delay-1">
+        <div class="depo-quote-mark">"</div>
+        <p class="depo-text">O diagnóstico mudou tudo. Pela primeira vez alguém me mostrou exatamente onde eu estava e o que precisava desenvolver. Os relatórios me deixam ver a evolução acontecendo de verdade.</p>
+        <div class="depo-author">
+          <div class="depo-avatar">R</div>
+          <div class="depo-name">Rafael <span>Aluno · Intensivo</span></div>
+        </div>
+      </div>
+      <div class="depo-card reveal reveal-delay-2">
+        <div class="depo-quote-mark">"</div>
+        <p class="depo-text">As aulas são acolhedoras e ao mesmo tempo muito bem estruturadas. Nunca me senti perdida: sempre sei o que estou aprendendo, por que estou aprendendo e qual é o próximo passo.</p>
+        <div class="depo-author">
+          <div class="depo-avatar">C</div>
+          <div class="depo-name">Camila <span>Aluna · Small Groups</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="programas-header text-center" style="max-width:600px; margin:0 auto 48px;">
+    <div class="section-label reveal" style="justify-content:center;">FAQ</div>
+    <h2 class="section-title reveal reveal-delay-1">Perguntas frequentes.</h2>
+    <p class="section-lead reveal reveal-delay-2" style="margin:0 auto;">Tire suas dúvidas antes de começar. Se não encontrar o que procura, é só falar com a escola!</p>
+  </div>
+
+  <div class="faq-list" style="max-width:720px; margin:0 auto;">
+
+    <div class="faq-item reveal">
+      <button class="faq-trigger" onclick="toggleFaq(this)">
+        Como funciona o diagnóstico?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-body">
+        <p>O diagnóstico é muito mais do que uma prova de nivelamento. É um mapeamento completo das suas competências linguísticas: nível de proficiência, fluência oral, compreensão auditiva, repertório, controle gramatical e segurança comunicativa. A partir daí, construímos um plano de fluência real, não um roteiro genérico.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal reveal-delay-1">
+      <button class="faq-trigger" onclick="toggleFaq(this)">
+        Quanto tempo para alcançar fluência?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-body">
+        <p>Depende de alguns fatores: nível de partida, frequência de exposição ao idioma, consistência nos estudos e objetivos específicos. O que podemos dizer é que, com metodologia estruturada, acompanhamento real e comprometimento, o desenvolvimento acontece de forma consistente e visível. Na Fluency Garden, você acompanha sua evolução em cada etapa.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal reveal-delay-2">
+      <button class="faq-trigger" onclick="toggleFaq(this)">
+        As aulas são online?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-body">
+        <p>Sim, todas as aulas são realizadas online. O formato permite flexibilidade de agenda sem abrir mão de uma experiência pedagógica de qualidade, com acompanhamento próximo e interação real.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal reveal-delay-3">
+      <button class="faq-trigger" onclick="toggleFaq(this)">
+        Como funciona o acompanhamento?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-body">
+        <p>O acompanhamento é contínuo. Além do que acontece dentro das aulas, o aluno conta com relatórios periódicos de evolução, plano de fluência individual e monitoramento de competências ao longo da jornada. O objetivo é que você sempre saiba onde está e o que precisa desenvolver a seguir.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-trigger" onclick="toggleFaq(this)">
+        Qual é a metodologia da escola?
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-body">
+        <p>A metodologia da Fluency Garden é baseada em referências consolidadas da Linguística Aplicada: CEFR (padrão internacional de progressão), Ensino Comunicativo (CLT), Ensino Baseado em Tarefas (TBLT) e fundamentos da Aquisição de Segunda Língua (SLA). Na prática: ensino estruturado, comunicativo, progressivo e personalizado. O objetivo final é sempre a fluência real, não o inglês de prova.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="contato">
+  <div class="cta-card">
+    <div class="section-label reveal" style="justify-content:center;">Pronto para começar?</div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">
+      Aonde o seu inglês<br>te leva <em>hoje?</em>
+    </h2>
+    <p class="cta-sub reveal reveal-delay-2">
+      Faça o diagnóstico e descubra onde você está e para onde pode ir com a estrutura certa do seu lado.
+    </p>
+
+    <!-- CAPTAÇÃO DE LEADS -->
+    <form class="lead-form reveal reveal-delay-2" id="leadForm" novalidate>
+      <div class="lead-fields">
+        <input type="text" name="nome" placeholder="Seu nome" required autocomplete="name" aria-label="Seu nome">
+        <input type="text" name="contato" placeholder="Seu WhatsApp ou e-mail" required autocomplete="email" aria-label="Seu WhatsApp ou e-mail">
+        <input type="text" name="horario" class="lead-field-full" placeholder="Horário de interesse (ex: terças e quintas após as 19h)" autocomplete="off" aria-label="Horário de interesse para as aulas">
+      </div>
+      <!-- honeypot antispam: usuários reais nunca veem este campo -->
+      <input type="text" name="_honey" class="lead-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit" class="lead-submit">Quero meu diagnóstico gratuito</button>
+      <p class="lead-feedback" id="leadFeedback" role="status" aria-live="polite"></p>
+      <p class="lead-privacy">Seus dados são usados apenas para retornarmos o seu contato.</p>
+    </form>
+
+    <p class="lead-divider reveal reveal-delay-3">ou, se preferir, fale agora:</p>
+
+    <div class="cta-buttons reveal reveal-delay-3">
+      <a href="https://wa.me/5511996347484?text=Hello%21+Vim+pelo+site+e+quero+saber+mais+sobre+as+aulas%21" target="_blank" rel="noopener" class="btn-whatsapp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.558 4.116 1.525 5.843L.057 23.571a.5.5 0 00.611.611l5.728-1.468A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.939 0-3.762-.524-5.327-1.436l-.381-.226-3.956 1.014 1.014-3.768-.249-.395A9.964 9.964 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a href="https://www.instagram.com/fluencygardenschool" target="_blank" rel="noopener" class="btn-instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Ver no Instagram
+      </a>
+    </div>
+    <p class="cta-note reveal reveal-delay-4">Diagnóstico gratuito · Sem compromisso</p>
+  </div>
+</section>
+
+<!-- BANCO DE TALENTOS -->
+<section id="banco-talentos">
+  <div class="talentos-inner">
+    <div class="talentos-text">
+      <div class="section-label reveal">Para professores</div>
+      <h2 class="talentos-title reveal reveal-delay-1">Seu inglês pode ajudar<br>outras pessoas <em>a florescer.</em></h2>
+      <p class="talentos-lead reveal reveal-delay-2">
+        Estamos sempre conhecendo educadores que compartilham nossa visão de ensino. Mesmo sem uma vaga aberta no momento, sua candidatura permanece em nosso banco de talentos pedagógico e é considerada quando surge uma oportunidade compatível com seu perfil.
+      </p>
+    </div>
+    <a href="faca-parte-do-time.html" class="talentos-cta reveal reveal-delay-3">Faça parte do time</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#home" class="footer-logo">
+    <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" rx="18" fill="rgba(255,254,238,0.08)"/>
+      <path d="M50 30 C50 22 44 18 44 18 C44 18 38 22 38 30 C38 38 44 38 44 38" stroke="#fffeee" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M50 30 C50 22 56 18 56 18 C56 18 62 22 62 30 C62 38 56 38 56 38" stroke="#fffeee" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M50 30 C42 30 38 24 38 24 C38 24 38 30 44 34 C50 38 50 38 50 38" stroke="#ffdbe0" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M50 30 C58 30 62 24 62 24 C62 24 62 30 56 34 C50 38 50 38 50 38" stroke="#ffdbe0" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M50 34 C49 33 47 33 47 35 C47 36.5 50 39 50 39 C50 39 53 36.5 53 35 C53 33 51 33 50 34Z" fill="#ffdbe0"/>
+      <line x1="50" y1="39" x2="50" y2="58" stroke="#fffeee" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M50 58 L44 65 M50 58 L50 66 M50 58 L56 65 M44 65 L40 70 M50 66 L48 72 M50 66 L52 72 M56 65 L60 70" stroke="#fffeee" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <div class="footer-logo-text">
+      Fluency Garden
+      <span>English School</span>
+    </div>
+  </a>
+
+  <p class="footer-copy">© 2025 Fluency Garden English School. Todos os direitos reservados.</p>
+
+  <ul class="footer-links">
+    <li><a href="https://wa.me/5511996347484" target="_blank" rel="noopener">WhatsApp</a></li>
+    <li><a href="https://www.instagram.com/fluencygardenschool" target="_blank" rel="noopener">Instagram</a></li>
+  </ul>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/5511996347484?text=Hello%21+Vim+pelo+site+e+quero+saber+mais+sobre+as+aulas%21" target="_blank" rel="noopener" class="whatsapp-float" title="Falar no WhatsApp" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.558 4.116 1.525 5.843L.057 23.571a.5.5 0 00.611.611l5.728-1.468A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.939 0-3.762-.524-5.327-1.436l-.381-.226-3.956 1.014 1.014-3.768-.249-.395A9.964 9.964 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
