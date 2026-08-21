@@ -84,7 +84,6 @@
   nav.scrolled { box-shadow: 0 2px 24px rgba(29,29,71,0.08); height: 66px; }
 
   .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .nav-logo-icon { width: 42px; height: 42px; }
   .nav-logo-text {
     font-family: var(--font-logo);
     font-weight: 700;
@@ -426,7 +425,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: none; /* unhide when you add a real photo */
+    /* a moldura é 4/5 e a foto é 2/3: o corte é vertical.
+       Puxa o enquadramento para cima para manter o rosto na área visível. */
+    object-position: 50% 28%;
+    display: block;
   }
 
   .hero-float-card {
@@ -657,7 +659,13 @@
     padding: 20px;
     opacity: 0.6;
   }
-  .sobre-photo img { width: 100%; height: 100%; object-fit: cover; display: none; }
+  .sobre-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 22%;
+    display: block;
+  }
 
   .sobre-deco {
     position: absolute;
@@ -1598,6 +1606,12 @@
     justify-content: space-between;
     gap: 56px;
   }
+  .talentos-selo {
+    width: clamp(96px, 11vw, 132px);
+    height: auto;
+    flex-shrink: 0;
+    align-self: center;
+  }
   .talentos-text { max-width: 640px; }
   .talentos-title {
     font-family: var(--font-display);
@@ -1643,6 +1657,7 @@
       align-items: flex-start;
       gap: 32px;
     }
+    .talentos-selo { width: 84px; align-self: flex-start; }
   }
 
   footer {
@@ -1727,10 +1742,31 @@
     100% { transform: scale(1.6); opacity: 0; }
   }
 
-  /* ─── LOGO SVG ─── */
-  .logo-svg { width: 42px; height: 42px; }
+  /* ─── LOGO DA MARCA ─── */
+  .logo-mark {
+    height: 46px;
+    width: auto;
+    flex-shrink: 0;
+  }
+  /* O arquivo da logo é traço escuro sobre fundo transparente.
+     Sobre o navy do rodapé ele sumiria, então é convertido para creme. */
+  .logo-mark-light {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.92;
+  }
 
   /* ─── FAÇA PARTE DO TIME (recruitment page) ─── */
+  .job-hero-adesivo {
+    display: block;
+    width: clamp(200px, 24vw, 280px);
+    height: auto;
+    margin: 0 auto 22px;
+  }
+  @media (max-width: 768px) {
+    .job-hero-adesivo { width: 190px; margin-bottom: 16px; }
+  }
   .job-hero {
     min-height: 88vh;
     padding: 160px 5% 90px;
