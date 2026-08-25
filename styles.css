@@ -564,6 +564,11 @@
   }
   .section-title em { font-style: italic; color: var(--wine); }
 
+  /* Sobre fundo navy o vinho quase desaparece (contraste ~1.4:1).
+     Nessas secoes o destaque usa o rosa da paleta. */
+  #experiencia .section-title em,
+  .cta-card .section-title em { color: var(--pink); }
+
   .section-lead {
     font-size: 1.08rem;
     color: var(--text-soft);
@@ -1767,10 +1772,14 @@
   @media (max-width: 768px) {
     .job-hero-adesivo { width: 190px; margin-bottom: 16px; }
   }
-  .job-hero {
+  /* O elemento e <section id="home" class="job-hero">. O seletor #home do hero
+     da home tem especificidade maior que .job-hero e impunha um grid de duas
+     colunas, deixando a coluna da direita vazia. O ID entra aqui para vencer. */
+  #home.job-hero {
+    display: flex;
+    grid-template-columns: none;
     min-height: 88vh;
     padding: 160px 5% 90px;
-    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
