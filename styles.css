@@ -1290,6 +1290,8 @@
     margin-bottom: 28px;
     flex-grow: 1;
   }
+  /* Ênfase dentro de um texto já em itálico: volta ao normal e ganha peso */
+  .depo-text em { font-style: normal; font-weight: 600; color: var(--wine); }
   .depo-author { display: flex; align-items: center; gap: 14px; }
   .depo-avatar {
     width: 46px; height: 46px;
@@ -1319,7 +1321,13 @@
     color: var(--text-soft);
     margin-top: 2px;
   }
-  @media (max-width: 1024px) { .depo-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } }
+  /* Última linha incompleta: centraliza o card órfão em vez de deixá-lo à esquerda */
+  .depo-card:last-child:nth-child(3n + 1) { grid-column: 2; }
+
+  @media (max-width: 1024px) {
+    .depo-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+    .depo-card:last-child:nth-child(3n + 1) { grid-column: auto; }
+  }
 
   /* ─── FAQ ─── */
   #faq { padding: 76px 5%; }

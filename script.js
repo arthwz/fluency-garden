@@ -62,9 +62,14 @@
   }
 
   // ─── CAPTAÇÃO DE LEADS (FormSubmit) ───
-  // Troque o e-mail abaixo pelo endereço que deve receber os leads.
-  // No primeiro envio, o FormSubmit manda um e-mail de ativação — clique nele uma única vez.
-  const LEAD_EMAIL = '';
+  // Destino dos leads. No primeiro envio o FormSubmit manda um e-mail de
+  // ativação para este endereço: clique no link uma única vez para liberar.
+  //
+  // ATENÇÃO: este valor fica visível no código-fonte da página e no repositório
+  // público. Depois de ativar, o FormSubmit fornece um token aleatório que
+  // funciona no lugar do e-mail. Ao trocar pelo endereço da escola, prefira o
+  // token: basta colar o token aqui, o resto do código não muda.
+  const LEAD_EMAIL = 'fluencygardenschool.leads@gmail.com';
 
   const leadForm = document.getElementById('leadForm');
   if (leadForm) {
