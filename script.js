@@ -62,14 +62,13 @@
   }
 
   // ─── CAPTAÇÃO DE LEADS (FormSubmit) ───
-  // Destino dos leads. No primeiro envio o FormSubmit manda um e-mail de
-  // ativação para este endereço: clique no link uma única vez para liberar.
+  // Destino dos leads: token do FormSubmit vinculado à caixa da escola. O token
+  // é feito para ficar no front-end — é justamente ele que mantém o endereço de
+  // e-mail fora do código-fonte e do repositório público.
   //
-  // ATENÇÃO: este valor fica visível no código-fonte da página e no repositório
-  // público. Depois de ativar, o FormSubmit fornece um token aleatório que
-  // funciona no lugar do e-mail. Ao trocar pelo endereço da escola, prefira o
-  // token: basta colar o token aqui, o resto do código não muda.
-  const LEAD_EMAIL = 'fluencygardenschool.leads@gmail.com';
+  // Para trocar a caixa que recebe os leads, gere um token novo no FormSubmit e
+  // substitua a constante abaixo; o resto do código não muda.
+  const FORMSUBMIT_TOKEN = '52e64997ad0d46562c857240f6ca26fe';
 
   const leadForm = document.getElementById('leadForm');
   if (leadForm) {
@@ -90,7 +89,7 @@
       feedback.textContent = '';
 
       try {
-        const res = await fetch('https://formsubmit.co/ajax/' + LEAD_EMAIL, {
+        const res = await fetch('https://formsubmit.co/ajax/' + FORMSUBMIT_TOKEN, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({

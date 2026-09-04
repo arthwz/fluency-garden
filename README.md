@@ -68,16 +68,19 @@ renderizado em peso e cor de destaque, em vez de mais itálico.
 ## Captação de leads
 
 O formulário envia via [FormSubmit](https://formsubmit.co) para a constante
-`LEAD_EMAIL` em `script.js`, sem backend próprio.
+`FORMSUBMIT_TOKEN` em `script.js`, sem backend próprio.
 
-O destino atual é `fluencygardenschool.leads@gmail.com`. Como este repositório é
-público, o endereço fica visível no código-fonte e indexável. Depois da ativação,
-o FormSubmit fornece um token aleatório que funciona no lugar do e-mail — colar o
-token na constante resolve a exposição, e nenhuma outra linha muda.
+O token é o identificador público que o FormSubmit emite para uma caixa já
+ativada, e pode ficar no front-end sem problema: é justamente ele que mantém o
+endereço de e-mail da escola fora do código-fonte e deste repositório público.
+Para trocar a caixa que recebe os leads, gere um token novo e substitua a
+constante.
+
+O corpo do envio leva ainda `_subject`, que define o assunto do e-mail, e
+`_honey`, campo-isca anti-spam que fica oculto no formulário e só é preenchido
+por robôs.
 
 ## Pendências
 
-- Ativar o FormSubmit: o primeiro envio pelo site dispara um e-mail de confirmação
-  para a caixa de leads; é preciso clicar no link uma única vez para os envios
-  seguintes chegarem
-- Trocar o `LEAD_EMAIL` pelo token do FormSubmit assim que ele for emitido
+- Testar um envio real pelo formulário publicado e confirmar que o lead chega na
+  caixa da escola
