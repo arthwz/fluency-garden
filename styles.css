@@ -1259,8 +1259,11 @@
   .depo-inner { max-width: 1240px; margin: 0 auto; }
   .depo-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    /* Estreita a grade para o texto em itálico não virar linhas longas demais */
+    max-width: 940px;
+    margin: 0 auto;
   }
   .depo-card {
     background: var(--cream);
@@ -1321,12 +1324,16 @@
     color: var(--text-soft);
     margin-top: 2px;
   }
-  /* Última linha incompleta: centraliza o card órfão em vez de deixá-lo à esquerda */
-  .depo-card:last-child:nth-child(3n + 1) { grid-column: 2; }
+  /* Número ímpar de depoimentos: centraliza o card órfão da última linha */
+  .depo-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc(50% - 12px));
+  }
 
-  @media (max-width: 1024px) {
-    .depo-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
-    .depo-card:last-child:nth-child(3n + 1) { grid-column: auto; }
+  @media (max-width: 768px) {
+    .depo-grid { grid-template-columns: 1fr; max-width: 560px; }
+    .depo-card:last-child:nth-child(odd) { grid-column: auto; width: auto; }
   }
 
   /* ─── FAQ ─── */

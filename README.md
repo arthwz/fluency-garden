@@ -54,11 +54,13 @@ recebidos, quatro estão publicados; os demais ficam no histórico do repositór
 Para incluir ou remover um card, duplique um bloco `.depo-card` em `index.html`.
 Duas convenções:
 
-- As classes `reveal-delay-1` / `reveal-delay-2` escalonam a animação **dentro de
-  cada linha** de três cards. O primeiro card de cada linha leva só `reveal`.
-- A grade tem três colunas. Quando a última linha fica com um card sozinho, o CSS
-  o centraliza automaticamente (`.depo-card:last-child:nth-child(3n + 1)`), então
-  4 ou 7 depoimentos continuam alinhados. Múltiplos de 3 preenchem a grade cheia.
+- A grade tem duas colunas, com largura máxima menor que a do resto da seção para
+  o texto em itálico não formar linhas longas demais. Em número ímpar de
+  depoimentos, o CSS centraliza sozinho o card órfão da última linha
+  (`.depo-card:last-child:nth-child(odd)`).
+- As classes `reveal-delay-*` escalonam a animação **dentro de cada linha**. Com
+  duas colunas, o padrão alterna `reveal` e `reveal-delay-1`; ao mudar a
+  quantidade de colunas, reajuste esse ciclo.
 
 Ênfase dentro da citação vai em `<em>`, que no contexto do texto em itálico é
 renderizado em peso e cor de destaque, em vez de mais itálico.
